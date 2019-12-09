@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Hello</p>
+<div>
+<h1>Predict flower</h1>
+
+<form action="{{ url_for('index')}}"method="post">
+<label for="sepal length (cm)">sepal length (cm):</label>
+<input type="number" name="sepal length (cm)" placeholder="sepal length (cm)" value=1 required="required" /><br>
+<label for="sepal length (cm)">sepal width (cm):</label>
+<input type="number" name="sepal width (cm)" placeholder="sepal width (cm)" value=1 required="required" /><br>
+<label for="sepal length (cm)">petal length (cm):</label>
+<input type="number" name="petal length (cm)" placeholder="petal length (cm)" value=1 required="required" /><br>
+<label for="sepal length (cm)">petal width (cm):</label>
+<input type="number" name="petal width (cm)" placeholder="petal width (cm)" value=1 required="required" />
+
+<button type="submit" class="btn btn-primary btn-block btn-small">Predict</button>
+</form>
+
+<br>
+<br>
+<p>Prediction: {{ prediction }}</p>
+
+</div>
 {% endblock %}
