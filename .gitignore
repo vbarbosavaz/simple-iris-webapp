@@ -17,3 +17,5 @@ build/
 Desktop.ini
 Thumbs.db
 ._*
+
+.ipynb_checkpoints
