@@ -126,7 +126,7 @@ Create the docker containers (depending on your computer and your connexion this
 docker build -t app_flask:latest .
 ```
 
-Lunch the container
+Launch the container
 
 ```bash
 docker run -p 5000:5000 app_flask
