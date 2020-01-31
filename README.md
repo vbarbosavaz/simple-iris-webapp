@@ -120,7 +120,7 @@ First go where you have cloned the project then enter into DSIA5201A_app folder
 cd path_to/DSIA5201A_app
 ```
 
-Create the docker containers (depending on your computer and your connexion this operation can take a while).
+Create the docker containers (depending on your computer and your connexion this operation can take a while)
 
 ```bash
 docker build -t app_flask:latest .
