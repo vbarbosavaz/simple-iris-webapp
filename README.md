@@ -111,3 +111,25 @@ export FLASK_ENV=development
 ```
 
 ## Dependencies
+
+## Running the app within a docker
+
+First go where you have cloned the project then enter into DSIA5201A_app folder
+
+```bash
+cd path_to/DSIA5201A_app
+```
+
+Create the docker containers (depending on your computer and your connexion and you computer this operation can take a few minutes).
+
+```bash
+docker build -t app_flask:latest .
+```
+
+Lunch the container
+
+```bash
+docker run -p 5000:5000 app_flask
+```
+
+The web can be find a the adress http://localhost:5000/
