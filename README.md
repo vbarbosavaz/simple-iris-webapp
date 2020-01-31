@@ -8,7 +8,7 @@ An academic project that includes some of the concepts covered during the "DevOp
 
 - [Vincent Barbosa Vaz](https://www.linkedin.com/in/vincent-barbosa-vaz/)
 - Dhanashri Rajput
-- Clea Ngouansavanh
+- [Clea Ngouansavanh](https://www.linkedin.com/in/cl%C3%A9a-ngouansavanh-155766182/)
 - Elias Bouillanne
 
 **Teacher:** [Pouya Yousefi](https://www.linkedin.com/in/pouyaconsulting/)
