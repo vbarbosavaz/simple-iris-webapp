@@ -1,11 +1,35 @@
-# DSIA5201A
+# Simple Machine Learning App
 
-Authors:
+An academic project that includes some of the concepts covered during the "DevOps for Data Science" course DSIA-5201A at ESIEE Paris.
 
-- Vincent Barbosa Vaz
+**Keywords:** Machine learning, DevOps, Flask, Python, Docker
+
+**Authors:**
+
+- [Vincent Barbosa Vaz](https://www.linkedin.com/in/vincent-barbosa-vaz/)
 - Dhanashri Rajput
-- Clea Ngouansavanh
+- [Clea Ngouansavanh](https://www.linkedin.com/in/cl%C3%A9a-ngouansavanh-155766182/)
 - Elias Bouillanne
+
+**Teacher:** [Pouya Yousefi](https://www.linkedin.com/in/pouyaconsulting/)
+
+**Course unit:** DSIA-5201A (ESIEE Paris)
+
+## Course Objective
+
+* Know what to expect in enterprise
+
+  * Understand tools, processes, and techniques for deploying data science software into a production environment as
+you would in a corporate role.
+  * Look at a dataset and / or business problem  and provide solutions
+  * Be able to talk and understand data science software dev and infrastructure
+  * Be able to speak Agile & Scrum
+
+* Know your worth
+
+  * Developer
+  * Data Scientist: Machine Learning Engineer
+  * DevOps: Site Reliability Engineer, Infrastructure Engineer, Cloud Engineer
 
 ## Running the project
 
@@ -87,3 +111,26 @@ export FLASK_ENV=development
 ```
 
 ## Dependencies
+
+## Running the app within a docker container
+
+First go where you have cloned the project then enter into DSIA5201A_app folder
+
+```bash
+cd path_to/DSIA5201A_app
+```
+
+Create the docker containers (depending on your computer and your connexion this operation can take a while)
+
+```bash
+docker build -t app_flask:latest .
+```
+
+Launch the container
+
+```bash
+docker run -p 5000:5000 app_flask
+```
+
+
+The web can be find a the adress http://localhost:5000/
