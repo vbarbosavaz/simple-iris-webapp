@@ -131,9 +131,9 @@ docker build -t app_flask:latest .
 
 Fect the image of the web app on docker hub
 
-'''bash
+```bash
 docker pull eliasbouillanne/dsia5201_group4:latest
-'''
+```
 
 ### 3/ Launch the container
 
