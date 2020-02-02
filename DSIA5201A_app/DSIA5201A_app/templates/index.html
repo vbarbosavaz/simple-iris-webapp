@@ -1,25 +1,122 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-<h1>Predict flower</h1>
 
-<form action="{{ url_for('index')}}"method="post">
-<label for="sepal length (cm)">sepal length (cm):</label>
-<input type="number" name="sepal length (cm)" placeholder="sepal length (cm)" value=1 required="required" /><br>
-<label for="sepal length (cm)">sepal width (cm):</label>
-<input type="number" name="sepal width (cm)" placeholder="sepal width (cm)" value=1 required="required" /><br>
-<label for="sepal length (cm)">petal length (cm):</label>
-<input type="number" name="petal length (cm)" placeholder="petal length (cm)" value=1 required="required" /><br>
-<label for="sepal length (cm)">petal width (cm):</label>
-<input type="number" name="petal width (cm)" placeholder="petal width (cm)" value=1 required="required" />
+<div style="margin-top: 50px; margin-bottom: 50px;" class="container">
 
-<button type="submit" class="btn btn-primary btn-block btn-small">Predict</button>
+<div style="margin-bottom: 50px;">
+<center>
+<h1>Iris flower data set prediction</h1>
+</center>
+</div>
+
+<center><img style="width:30%;" src="static/img/iris.png"></center>
+</div>
+
+<div class="container">
+<form action="{{ url_for('predict')}}" method="post">
+<div class="form-group">
+  <center>
+<label for="sepal length (cm)">Sepal length (in cm):</label>
+<input type="number" step=0.1 name="sepal length (cm)" placeholder="sepal length (cm)" value=1 required="required" /><br>
+<label for="sepal length (cm)">Sepal width (in cm):</label>
+<input type="number" step=0.1 name="sepal width (cm)" placeholder="sepal width (cm)" value=1 required="required" /><br>
+<label for="sepal length (cm)">Petal length (in cm):</label>
+<input type="number" step=0.1 name="petal length (cm)" placeholder="petal length (cm)" value=1 required="required" /><br>
+<label for="sepal length (cm)">Petal width (in cm):</label>
+<input type="number" step=0.1 name="petal width (cm)" placeholder="petal width (cm)" value=1 required="required" />
+<br>
+<button style="width: 30%;" type="submit" class="btn btn-success btn-small">Predict</button>
+</center>
+</div>
 </form>
+</div>
+
+<hr>
 
 <br>
 <br>
-<p>Prediction: {{ prediction }}</p>
+<div class="container">
+<h2>Prediction</h2>
+
+<!--<p>{{ prediction }}</p>-->
+
+
+{% if prediction == "setosa" %}
+The classifier predicted your flower to be <span style="color:blue;">setosa</span> type.
+<center><div style="margin-top: 30px; margin-bottom: 30px;"><img style="width: 30%;" src="static/img/setosa.jpg"></div></center>
+{% elif prediction == "virginica" %}
+The classifier predicted your flower to be <span style="color:blue;">virginica</span> type.
+<center><div style="margin-top: 30px; margin-bottom: 30px;"><img style="width: 30%;" src="static/img/virginica.jpg"></div></center>
+{% elif prediction == "versicolor" %}
+The classifier predicted your flower to be <span style="color:blue;">versicolor</span> type.
+<center><div style="margin-top: 30px; margin-bottom: 30px;"><img style="width: 30%;" src="static/img/versicolor.jpg"></div></center>
+{% endif %}
+
 
 </div>
+<hr>
+
+<div class="container">
+<h2>Informations</h2>
+
+<p>
+The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant.
+One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.
+
+<center><div style="margin-top: 30px; margin-bottom: 30px;"><img style="width: 30%;" src="static/img/iris_scatterplot.png"></div></center>
+
+Samples from iris dataset:
+<br><br>
+
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th>Sepal length</th>
+    <th>Sepal width</th>
+    <th>Petal length</th>
+    <th>Petal width</th>
+    <th>Species</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>5.1</td>
+    <td>3.5</td>
+    <td>1.4</td>
+    <td>0.2</td>
+    <td>Iris-setosa</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>3.2</td>
+    <td>4.7</td>
+    <td>1.4</td>
+    <td>Iris-versicolor</td>
+  </tr>
+  <tr>
+    <td>6.3</td>
+    <td>3.3</td>
+    <td>6</td>
+    <td>2.5</td>
+    <td>Iris-virginica</td>
+  </tr>
+  </tbody>
+</table>
+
+Sources:<br>
+<ul>
+  <li><a href="https://archive.ics.uci.edu/ml/datasets/iris" target="_blank">https://archive.ics.uci.edu/ml/datasets/iris</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Iris_flower_data_set" target="_blank">https://en.wikipedia.org/wiki/Iris_flower_data_set</a></li>
+</ul>
+
+
+</p>
+
+<p>
+<span style="font-weight: bold;">Accuracy of the classifier:</span> <span style="color:green;">92%</span>
+</p>
+</div>
+
+
 {% endblock %}

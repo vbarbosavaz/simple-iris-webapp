@@ -31,6 +31,10 @@ you would in a corporate role.
   * Data Scientist: Machine Learning Engineer
   * DevOps: Site Reliability Engineer, Infrastructure Engineer, Cloud Engineer
 
+## App preview
+
+![screenshot of the app](img/screenshot_app.png)
+
 ## Running the project
 
 1. **cd** into **DSIA5201A_app**
@@ -110,7 +114,11 @@ Turn on the development features
 export FLASK_ENV=development
 ```
 
-## Dependencies
+## Project structure
+
+**simple-iris-webapp/DSIA5201A_app/**: the app
+
+**simple-iris-webapp/DSIA5201A_app/DSIA5201A_app/static/ai/**: python code to build the classifier
 
 ## Running the app within a docker container
 
