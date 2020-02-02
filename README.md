@@ -122,6 +122,8 @@ export FLASK_ENV=development
 
 ## Running the app within a docker container
 
+### 1/ If you want to rebuild manually the docker image
+
 First go where you have cloned the project then enter into DSIA5201A_app folder
 
 ```bash
@@ -133,8 +135,15 @@ Create the docker containers (depending on your computer and your connexion this
 ```bash
 docker build -t app_flask:latest .
 ```
+### 2/ If you want don't want to rebuild manually the docker image
 
-Launch the container
+Fect the image of the web app on docker hub
+
+```bash
+docker pull eliasbouillanne/dsia5201_group4:latest
+```
+
+### 3/ Launch the container
 
 ```bash
 docker run -p 5000:5000 app_flask
