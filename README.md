@@ -33,6 +33,12 @@ you would in a corporate role.
 
 ## App preview
 
+**Checkout the app:** [https://simple-iris-webapp.herokuapp.com/](https://simple-iris-webapp.herokuapp.com/)
+
+Note: The website may also be down from time to time (free plan).
+
+Heroku: [Build apps for free on Heroku](https://www.heroku.com/free)
+
 ![screenshot of the app](img/screenshot_app.png)
 
 ## Running the project
@@ -122,9 +128,9 @@ export FLASK_ENV=development
 
 ## Running the app within a docker container
 
-### 1/ If you want to rebuild manually the docker image
+**If you want to rebuild manually the docker image**
 
-First go where you have cloned the project then enter into DSIA5201A_app folder
+*cd* into DSIA5201A_app folder:
 
 ```bash
 cd path_to/DSIA5201A_app
@@ -135,19 +141,18 @@ Create the docker containers (depending on your computer and your connexion this
 ```bash
 docker build -t app_flask:latest .
 ```
-### 2/ If you want don't want to rebuild manually the docker image
+**If you don't want to rebuild manually the docker image**
 
-Fect the image of the web app on docker hub
+Fetch the image from docker hub:
 
 ```bash
 docker pull eliasbouillanne/dsia5201_group4:latest
 ```
 
-### 3/ Launch the container
+**Launch the container**
 
 ```bash
 docker run -p 5000:5000 app_flask
 ```
 
-
-The web can be find a the adress http://localhost:5000/
+Open: http://localhost:5000/
